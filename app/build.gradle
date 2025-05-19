@@ -18,14 +18,14 @@ android {
         }
     }
 	
-	signingConfigs {
+    /*signingConfigs {
         release {
             storeFile file("Keystore/RKey.jks")
             storePassword "Takag1san"
             keyAlias "RystarsK"
             keyPassword "Takag1san"
         }
-    }
+    }*/
     
     buildTypes {
         release {
@@ -37,8 +37,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_17
-        targetCompatibility JavaVersion.VERSION_17
+        sourceCompatibility JavaVersion.VERSION_24
+        targetCompatibility JavaVersion.VERSION_24
     }
 
     buildFeatures {
