@@ -1,0 +1,60 @@
+[
+	{ "name": "badges", "datasrc": "badges.json", "icon": "iconic-bad-86", "title": "Badge", "options": {} },
+	{ "name": "shapes", "datasrc": "shapes.json", "icon": "iconu2-sha-u2-23", "title": "Shapes", "options": {} },
+	{ "name": "nature", "datasrc": "nature.json", "icon": "iconu2-nat-u2-9", "title": "Nature", "options": {} },
+	{ "name": "animals", "datasrc": "animals.json", "icon": "iconicu1-ani-u1-1", "title": "Animal", "options": {} },
+	{ "name": "abstract", "datasrc": "abstract.json", "icon": "iconu2-abs-u2-34", "title": "Abstract", "options": {} },
+	{
+		"name": "decorations",
+		"datasrc": "decorations.json",
+		"icon": "iconu2-dec-u2-38",
+		"title": "Decoration",
+		"options": {}
+	},
+	{
+		"name": "business",
+		"datasrc": "business.json",
+		"icon": "iconu2-bus-u2-44",
+		"title": "Business",
+		"options": { "item": "businessicons", "buybutton": "Business Icons" }
+	},
+	{
+		"name": "realestate",
+		"datasrc": "realestate.json",
+		"icon": "iconu2-rea-u2-20",
+		"title": "Realestate",
+		"options": {}
+	},
+	{ "name": "religious", "datasrc": "religious.json", "icon": "iconic-rel-12", "title": "Spiritual", "options": {} },
+	{
+		"name": "entertainment",
+		"datasrc": "entertainment.json",
+		"icon": "iconu2-ent-u2-17",
+		"title": "Entertainment",
+		"options": {}
+	},
+	{
+		"name": "transportation",
+		"datasrc": "transportation.json",
+		"icon": "iconu2-veh-u2-11",
+		"title": "Transportation",
+		"options": {}
+	},
+	{ "name": "food", "datasrc": "food.json", "icon": "iconu2-foo-u2-13", "title": "Food", "options": {} },
+	{ "name": "health", "datasrc": "health.json", "icon": "iconicu1-hea-u1-8", "title": "Health", "options": {} },
+	{
+		"name": "engineering",
+		"datasrc": "engineering.json",
+		"icon": "iconicu1-eng-u1-11",
+		"title": "Engineering",
+		"options": {}
+	},
+	{ "name": "fashion", "datasrc": "fashion.json", "icon": "iconic-fas-12", "title": "Fashion", "options": {} },
+	{ "name": "arrows", "datasrc": "arrows.json", "icon": "iconic-arr-30", "title": "Arrows", "options": {} },
+	{ "name": "emoji", "datasrc": "emoji.json", "icon": "iconic-emo-8", "title": "Faces", "options": {} },
+	{ "name": "people", "datasrc": "people.json", "icon": "iconic-peo-7", "title": "People", "options": {} },
+	{ "name": "romance", "datasrc": "romance.json", "icon": "iconu2-rom-u2-30", "title": "Romance", "options": {} },
+	{ "name": "construction", "datasrc": "construction.json", "icon": "iconu2-con-u2-32", "title": "Construction", "options": {} },
+	{ "name": "education", "datasrc": "education.json", "icon": "iconu2-edu-u2-36", "title": "Education", "options": {} },
+	{ "name": "baby", "datasrc": "baby.json", "icon": "iconu2-bab-u2-1", "title": "Baby", "options": {} }
+]

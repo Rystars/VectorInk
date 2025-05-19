@@ -1,0 +1,261 @@
+@desktop: ~'(min-width: 720px)';
+@tablet: ~'(min-width: 620px)';
+@phone: ~'(min-width: 320px) and (max-device-width: 719px) and (orientation: portrait)';
+@phone-landscape: ~'(min-width: 320px) and (max-device-width: 719px) and (orientation: landscape)';
+@small-phone: ~'(max-width: 320px)';
+
+@color-primary: #2196f3;
+@color-gray-light: #cfcfcf;
+
+@text-sm: 0.75rem;
+@text-md: 1rem;
+@text-lg: 1.5rem;
+
+@spacing-sm: 1rem;
+@spacing-md: 2rem;
+
+@edge-sm: 0.75rem;
+@edge-md: 1rem;
+
+@size-sm: 2.8rem;/*44.8px*/
+
+:root {
+	--f7-page-bg-color: white;
+}
+
+/*====================================
+=          		SIZE				=
+====================================*/
+.og-w-100{
+	width: 100%;
+}
+.og-w-50{
+	width: 50%;
+}
+.og-h-100{
+	width: 100%;
+}
+.og-h-50{
+	width: 50%;
+}
+/*====================================
+=          		FLEX				=
+====================================*/
+.og-f{
+    display: flex;
+}
+.og-f-start{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.og-f-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.og-f-scroll{
+    display: flex;
+    justify-content: flex-start;
+	align-items: center;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+/*====================================
+=          		PADDING				=
+====================================*/
+.og-pad-x{
+	padding-left: @spacing-sm;
+	padding-right: @spacing-sm;
+}
+/*====================================
+=          	POSITIONING				=
+====================================*/
+.og-top-sm{
+	top: @edge-sm;
+}
+.og-bottom-sm{
+	bottom: @edge-sm;
+}
+.og-right-sm{
+	right: @edge-sm;
+}
+.og-left-sm{
+	left: @edge-sm;
+}
+.og-bl-sm{
+	bottom: @edge-sm;
+	left: @edge-sm;
+}
+.og-br-sm{
+	bottom: @edge-sm;
+	right: @edge-sm;
+}
+.og-tl-sm{
+	top: @edge-sm;
+	left: @edge-sm;
+}
+.og-tr-sm{
+	top: @edge-sm;
+	right: @edge-sm;
+}
+/*====================================
+=          		BORDERS				=
+====================================*/
+.og-border-b-gray{
+	border-bottom: 1px solid @color-gray-light;
+}
+/*====================================
+=          		TEXT				=
+====================================*/
+.og-font-sm{
+	font-size: @text-sm;
+}
+.og-font-md{
+	font-size: @text-md;
+}
+.og-font-lg{
+	font-size: @text-lg;
+}
+/*====================================
+=          		UTILS				=
+====================================*/
+.close-button{
+	.og-font-lg;
+	&.top-right{
+		.og-abs;
+		.og-top-sm;
+		.og-right-sm;
+	}
+}
+.og-thumbnail{
+	overflow: hidden;
+	margin: 1rem;
+	&.md{
+		width: 8rem;
+		height: 8rem;
+	}
+	img{
+		object-fit: cover;
+	}
+}
+.og-abs{
+	position: absolute;
+}
+.og-rel{
+	position: relative;
+}
+.og-align-left{
+	margin-right: auto;
+}
+.og-align-right{
+	margin-left: auto;
+}
+/*====================================
+=          		MENU				=
+====================================*/
+.og-menu{
+	.og-rel;
+	display: flex;
+	align-items: center;
+	min-height: @size-sm;
+}
+/*====================================
+=          		INPUT				=
+====================================*/
+.og-input{
+    label{
+        font-size: @text-sm;
+    }
+    input{
+        padding: 0.75rem 0rem;
+        width: 100%;
+    }
+    border-bottom: 1px solid @color-gray-light;
+    margin-bottom: 1rem;
+}
+.og-file-input{
+	.og-rel;
+	overflow: hidden;
+	cursor: pointer;
+	input{
+		position: absolute;
+		opacity: 0.01;
+		left: 0px;
+		top: 0px;
+		z-index: 1;
+	}
+}
+/*====================================
+=          	CARDS					=
+====================================*/
+.og-media-card{
+	width: 18rem;
+	height: 18rem;
+	.card-content{
+		width: 100%;
+		height: 100%;
+		padding: 2rem 1rem;
+		overflow: hidden;
+		position: relative;
+		border-radius: var(--f7-card-border-radius);
+		.content{
+			width: 150%;
+			height: 150%;
+			overflow: hidden;
+			border-radius: var(--f7-card-border-radius);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.cover{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0.001)
+		}
+	}
+	.card-footer{
+		position: absolute;
+		bottom: 0px;
+		width: 100%;
+		left: 0px;
+		.dropdown{
+			a{
+				justify-content: space-between !important;
+			}
+		}
+		&:before{
+			height: 0px;
+		}
+	}
+}
+/*====================================
+=          		TABS				=
+====================================*/
+.og-tabs{
+	.og-f-start;
+	width: 100%;
+	height: @size-sm;
+	.og-tab{
+		.og-f-center;
+		width: 100%;
+		height: @size-sm;
+		box-sizing: border-box;
+	}
+	&.pill{
+
+	}
+	&.underline{
+		.og-tab.active{
+
+		}
+	}
+}
+/*====================================
+=          	INTERACTION				=
+====================================*/
+.og-button{}
+.og-icon{}
