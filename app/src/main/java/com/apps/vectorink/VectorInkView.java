@@ -57,8 +57,8 @@ public class VectorInkView extends Activity
 		vectorInk.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 		vectorInk.getSettings().setLoadsImagesAutomatically(true);
 		vectorInk.getSettings().setBuiltInZoomControls(true);
-		web_view.getSettings().setLightTouchEnabled(true);
-		web_view.getSettings().setDatabaseEnabled(true);
+		vectorInk.getSettings().setLightTouchEnabled(true);
+		vectorInk.getSettings().setDatabaseEnabled(true);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 			vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
 		}
