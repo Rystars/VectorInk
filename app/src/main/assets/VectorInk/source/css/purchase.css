@@ -1,0 +1,224 @@
+.subscribe-ui {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+}
+.subscribe-ui a {
+    text-decoration: none;
+}
+.subscribe-ui .subscribe-touchable {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 4px;
+    max-width: 340px;
+}
+.subscribe-ui .subscribe-touchable.full {
+    width: 100%;
+}
+.subscribe-ui .subscribe-link {
+    color: #1775eb;
+    padding: 12px;
+}
+.subscribe-ui .subscribe-header {
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 8px 0px;
+}
+.subscribe-ui .subscribe-header .subscribe-restore {
+    font-weight: 400;
+}
+.subscribe-ui .subscribe-header .subscribe-exit {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8b8b8b;
+}
+.subscribe-ui .subscribe-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 4px;
+    max-width: 340px;
+    background-color: #1775eb;
+    color: white;
+    border-width: 0px;
+    font-size: 18px;
+}
+.subscribe-ui .subscribe-button.row-button{
+    flex-direction: row;
+    justify-content: space-between;
+}
+.subscribe-ui .subscribe-button.full {
+    width: 100%;
+}
+.subscribe-ui .subscribe-button.full {
+    width: 100%;
+}
+.subscribe-ui .subscribe-button span {
+    color: white;
+}
+.subscribe-ui .subscribe-button .subscribe-price {
+    font-size: 25px;
+}
+.subscribe-ui .subscribe-divider {
+    border-color: #d2d2d2;
+    width: 80%;
+    margin: 26px 0px;
+    border-style: solid;
+}
+.subscribe-ui .subscribe-heading {
+    margin: 8px;
+}
+.subscribe-ui .premium-product {
+    position: relative;
+    min-height: 290px;
+}
+.subscribe-ui .premium-product .subscribe-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+}
+.subscribe-ui div.subscribe-info {
+    width: 70%;
+    color: #8b8b8b;
+    line-height: 16px;
+    font-size: 14px;
+    text-align: center;
+}
+.subscribe-ui .premium-product, .subscribe-ui .subscribe-branding {
+    max-height: 250px;
+    width: 100%;
+    overflow: hidden;
+    margin: 8px 0px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subscribe-ui .premium-product img, .subscribe-ui .subscribe-branding img {
+    height: 150%;
+    margin: auto;
+}
+.subscribe-ui .subscribe-body {
+    width: 92%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subscribe-ui .subscribe-body .subscribe-list {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.subscribe-ui .subscribe-body .subscribe-list ul {
+    padding: 0px;
+    margin: 0px;
+    width: 80%;
+    max-width: 340px;
+    margin-left: 12%;
+}
+.subscribe-ui .subscribe-body .subscribe-list ul li {
+    list-style-type: "\2714";
+    list-style-position: outside;
+    margin: 8px 0px;
+    width: 100%;
+    padding: 0px 16px;
+}
+.subscribe-ui > .subscribe-button {
+    width: 100%;
+}
+.subscribe-ui .subscribe-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.subscribe-ui .subscribe-options .subscribe-option {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    margin: 8px;
+    border-radius: 4px;
+    max-width: 340px;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    border: 3px solid #696969;
+    box-sizing: border-box;
+}
+.subscribe-ui .subscribe-options .subscribe-option.full {
+    width: 100%;
+}
+.subscribe-ui .subscribe-options .subscribe-option .subscribe-option-content {
+    width: 75%;
+}
+.subscribe-ui .subscribe-options .subscribe-option .subscribe-check {
+    width: 28px;
+    height: 28px;
+    background-color: white;
+    color: #8b8b8b;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.subscribe-ui .subscribe-options .subscribe-option.active {
+    border-color: #1775eb;
+}
+.subscribe-ui .subscribe-options .subscribe-option.active .subscribe-check {
+    background-color: #1775eb;
+    color: white;
+}
+.subscribe-ui .subscribe-options .subscribe-option .subscribe-badge {
+    position: absolute;
+    padding: 8px;
+    background-color: #ff8100;
+    color: white;
+    top: -14px;
+    right: -14px;
+    border-radius: 50px;
+    font-size: 14px;
+}
+.subscribe-ui .subscribe-options .subscribe-option .subscribe-info {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    font-size: 14px;
+    color: #8b8b8b;
+}
+/************************************************/
+.subscribe-ui .subscribe-logo{
+    min-height: 60px;
+}
+.subscribe-ui .subscribe-logo svg{
+    width: 300px;
+}
+.premium-icon{
+    color: orange;
+    position: absolute;
+    z-index: 99;
+    bottom: 8px;
+    left: 8px;
+}

@@ -1,0 +1,344 @@
+@import "vui.less";
+//**********************************************************************
+// < TOOLBAR
+//**********************************************************************
+.vx-toolbar{
+	.vx-transition;
+    position: absolute;
+	display: flex;
+	padding: @toolbar-padding;
+	z-index: 99940;
+}
+.vx-toolbar-inner{
+	position: relative;
+	display: flex;
+	background-color: @toolbar-background-color;
+	border-radius: @toolbar-border-radius;
+	justify-content: space-between;
+	.vx-control-group{
+		display: flex;
+	}
+}
+.vx-toolbar.vx-scroll-y{
+	.vx-toolbar-inner{
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+.vx-toolbar.vx-scroll-x{
+	.vx-toolbar-inner{
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+}
+.vx-toolbar.vx-scroll{
+	.vx-toolbar-inner{
+		overflow-y: auto;
+		overflow-x: auto;
+	}
+}
+
+.vx-toolbar.bordered{
+	.vx-toolbar-inner{
+		border-color: @toolbar-border-color;
+		border-style: solid;
+	}
+	&.border-all{
+		.vx-toolbar-inner{
+			border-width: @toolbar-border-width;
+		}
+	}
+	&.border-l{
+		.vx-toolbar-inner{
+			border-left-width: @toolbar-border-width;
+		}
+	}
+	&.border-t{
+		.vx-toolbar-inner{
+			border-top-width: @toolbar-border-width;
+		}
+	}
+	&.border-r{
+		.vx-toolbar-inner{
+			border-right-width: @toolbar-border-width;
+		}
+	}
+	&.border-b{
+		.vx-toolbar-inner{
+			border-bottom-width: @toolbar-border-width;
+		}
+	}
+}
+
+.vx-toolbar-item{
+	height: @toolbar-size;
+    width: @toolbar-size;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	>a, >.vx-item, >.vx-item a, .ivu-poptip-rel a{
+		color: @toolbar-text-color;
+		width: @toolbar-size;
+		height: @toolbar-size;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+	svg g path:first-child, svg g path {
+		fill: @toolbar-text-color;
+		stroke: @toolbar-text-color;
+	}
+}
+.vx-toolbar-item.vx-menu{
+	.dropdown{
+		.dropdown-menu.show{
+			background-color: #e4e4e4 !important;
+			width: 170px;
+		}
+		a{
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}
+.vx-toolbar-item.vx-action-group{
+	position: relative;
+	.vx-options{
+		position: absolute;
+		display: none;
+		left: 44px;
+	}
+}
+.vx-toolbar-item.active{
+	a{
+		color: @toolbar-active-color;
+	}
+	svg g path {
+		fill: @toolbar-active-color !important;
+		stroke: @toolbar-active-color;
+	}
+}
+//**********************************************************************
+// < MEDIA QUERIES
+//**********************************************************************
+@media @device-sm {
+	.vx-toolbar.vx-hidden-sm{
+		display: none;
+	}
+	.vx-control-toolbar{
+		.vx-toolbar-item{
+			width: 100%;
+		}
+	}
+	.vx-toolbar.bottom-sm, .vx-toolbar.top-sm{
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		left: 0px;
+		height: @toolbar-outer-size;
+		width: 100%;
+		.vx-toolbar-inner{
+			flex-direction: row;
+			height: @toolbar-size;
+			width: 100%;
+			justify-content: space-between;
+			.vx-control-group{
+				flex-direction: row;
+				justify-content: space-between;
+				margin: 0px;
+			}
+		}
+		.vx-toolbar-item{
+			width: 100%;
+		}
+		&.small-sm{
+			.vx-toolbar-inner{
+				width: auto;
+			}
+		}
+	}
+	.vx-toolbar.full-sm.bottom-sm{
+		.vx-control-group{
+			width: 100%;
+		}
+	}
+	.vx-toolbar.bottom-sm{
+		bottom: 0px;
+	}
+	.vx-toolbar.bottom-sm.two{
+		bottom: @toolbar-outer-size;
+	}
+	.vx-toolbar.top-sm{
+		top: 0px;
+	}
+	.vx-toolbar.top-sm.two{
+		top: @toolbar-outer-size;
+	}
+	.vx-toolbar.left-sm, .vx-toolbar.right-sm{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0px;
+		height: 100%;
+		width: @toolbar-outer-size;
+		.vx-toolbar-inner{
+			flex-direction: column;
+			height: 100%;
+			width: @toolbar-size;
+			.vx-control-group{
+				flex-direction: column;
+			}
+		}
+		&.small-sm{
+			.vx-toolbar-inner{
+				height: auto;
+			}
+		}
+		&.safe-space-sm{
+			padding-top: @toolbar-outer-size;
+		}
+	}
+	.vx-toolbar.left-sm{
+		left: 0px;
+		&.away-sm{
+			-webkit-transform: translate3d(-160%, 0px, 0px);
+		}
+	}
+	.vx-toolbar.right-sm{
+		right: 0px;
+	}
+	.vx-toolbar-item{
+		a{
+			font-size: @toolbar-font-size-sm;
+		}
+	}
+	.vx-toolbar.vx-toolbar-sm{
+		.vx-toolbar-item{
+			width: 44px;
+			height: 44px;
+		}
+	}
+}
+@media @device-lg, @device-sm-landscape {
+	.vx-toolbar.left-lg, .vx-toolbar.right-lg{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		top: 0px;
+		height: 100%;
+		width: @toolbar-outer-size;
+		.vx-toolbar-inner{
+			flex-direction: column;
+			height: 100%;
+			width: @toolbar-size;
+			.vx-control-group{
+				flex-direction: column;
+			}
+		}
+		&.small-lg{
+			.vx-toolbar-inner{
+				height: auto;
+			}
+		}
+		.vx-toolbar-item{
+			height: @toolbar-size;
+		}
+		&.safe-space-lg{
+			padding-top: @toolbar-outer-size;
+		}
+	}
+	.vx-toolbar.left-lg{
+		left: 0px;
+	}
+	.vx-toolbar.right-lg{
+		right: 0px;
+	}
+	.vx-toolbar.bottom-lg, .vx-toolbar.top-lg{
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		left: 0px;
+		height: @toolbar-outer-size;
+		width: 100%;
+		.vx-toolbar-inner{
+			flex-direction: row;
+			height: @toolbar-size;
+			width: 100%;
+			justify-content: space-between;
+			.vx-control-group{
+				flex-direction: row;
+				justify-content: space-between;
+				margin: 0px;
+			}
+		}
+		&.small-lg{
+			.vx-toolbar-inner{
+				width: auto;
+			}
+		}
+	}
+	.vx-toolbar.bottom-lg{
+		bottom: 0px;
+	}
+	.vx-toolbar.bottom-lg.two-lg{
+		bottom: @toolbar-outer-size;
+	}
+	.vx-toolbar.top-lg{
+		top: 0px;
+	}
+	.vx-toolbar.top-lg.two{
+		top: @toolbar-outer-size;
+	}
+	.vx-toolbar.small-lg{
+		.vx-toolbar-inner{
+			height: auto;
+		}
+	}
+	.vx-toolbar.left-lg{
+		left: 0px;
+	}
+	.vx-toolbar-item{
+		a{
+			font-size: @toolbar-font-size-lg;
+		}
+	}
+}
+@media @device-sm-landscape {
+	.vx-toolbar.left-lg{
+		background-color: @toolbar-background-color;
+	}
+}
+
+
+
+
+/*
+.vx-action-bar {
+    width: 84px;
+    min-width: 84px;
+}
+
+.vx-action-bar .vx-toolbar-inner {
+    width: 84px;
+    min-width: 84px;
+    height: 100% !important;
+    padding-top: 44px;
+    overflow-y:auto;
+}
+
+.vx-action-bar .vx-toolbar-inner .vx-toolbar-item{
+    width: 100%;
+    height: 60px;
+}
+
+.vx-action-bar .vx-toolbar-inner .vx-toolbar-item a{
+    width: 100%;
+    height: 60px;
+    font-size: 24px;
+}
+.vx-action-bar .vx-toolbar-inner .vx-toolbar-item .vx-box{
+    width: 100% !important;
+    height: 60px;
+}
+*/

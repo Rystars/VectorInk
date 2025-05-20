@@ -1,0 +1,82 @@
+
+@colors_grays: {
+    100: #CFCFCF;
+};
+@positions: 0, 4, 8, 12, 16, 20, 24;
+@sizes_rem: {
+    0: 0rem;
+    0-25: 0.25rem; 
+    0-5: 0.5rem;
+    0-75: 0.75rem; 
+    1: 1rem;
+    1-25: 1.25rem; 
+    1-5: 1.5rem;
+    2: 2rem;
+    2-5: 2.5rem; 
+    3: 3rem; 
+    4: 4rem; 
+    6: 6rem; 
+    8: 8rem; 
+    10: 10rem; 
+    12: 12rem;
+    20: 20%;
+    30: 30%;
+    50: 50%;
+};
+
+
+each(@positions, {
+    .og-t-@{value} {top: "@{value}px";}
+    .og-r-@{value} {right: "@{value}";}
+});
+each(@sizes_rem, {
+    .og-w-@{key} {
+        width: @value;
+    }
+    .og-h-@{key} {
+        height: @value;
+    }
+    .og-fs-@{key} {
+        font-size: @value;
+    }
+    .og-px-@{key} {
+        padding-left: @value;
+        padding-right: @value;
+    }
+    .og-py-@{key} {
+        padding-top: @value;
+        padding-bottom: @value;
+    }
+    .og-mx-@{key} {
+        margin-left: @value;
+        margin-right: @value;
+    }
+    .og-my-@{key} {
+        margin-top: @value;
+        margin-bottom: @value;
+    }
+    .og-mt-@{key} {
+        margin-bottom: @value;
+    }
+    .og-mb-@{key} {
+        margin-bottom: @value;
+    }
+});
+each(@colors_grays, {
+    .og-bc-gray-@{key} {
+        border-color: @value;
+    }
+    .og-b-gray-@{key} {
+        border: 1px solid @value;
+    }
+    .og-bb-gray-@{key} {
+        border-bottom: 1px solid @value;
+    }
+});
+
+.og-font-sm{
+    font-size: @sizes_rem[0-75];
+}
+.og-border-b-gray{
+    border-bottom: 1px solid @colors_grays[100];
+}

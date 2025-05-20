@@ -18,18 +18,18 @@ android {
         }
     }
 	
-    /*signingConfigs {
+	signingConfigs {
         release {
             storeFile file("Keystore/RKey.jks")
             storePassword "Takag1san"
             keyAlias "RystarsK"
             keyPassword "Takag1san"
         }
-    }*/
+    }
     
     buildTypes {
         release {
-//            signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
             
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -37,8 +37,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_24
-        targetCompatibility JavaVersion.VERSION_24
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     buildFeatures {

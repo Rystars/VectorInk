@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import android.webkit.DownloadListener;
@@ -53,15 +52,12 @@ public class VectorInkView extends Activity
 		vectorInk.getSettings().setAllowFileAccess(true);
 		vectorInk.getSettings().setDomStorageEnabled(true);
 		vectorInk.getSettings().setJavaScriptEnabled(true);
-		vectorInk.getSettings().setDatabaseEnabled(true);
-		// vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
+		vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
 		vectorInk.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 		vectorInk.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 		vectorInk.getSettings().setLoadsImagesAutomatically(true);
 		vectorInk.getSettings().setBuiltInZoomControls(true);
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-			vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
-		}
+		
 		vectorInk.setDownloadListener(new DownloadListener()
 		{
 			@Override

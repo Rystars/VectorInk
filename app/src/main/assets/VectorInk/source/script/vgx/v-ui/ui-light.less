@@ -1,0 +1,157 @@
+@device-lg: ~'(min-width: 720px)';
+@device-md: ~'(min-width: 620px)';
+@device-sm: ~'(min-width: 320px) and (max-width: 600px) and (orientation: portrait)';
+@device-sm-landscape: ~'(min-width: 568px) and (max-width: 812px) and (max-height: 414px) and (orientation: landscape)';
+@device-xs: ~'(max-width: 360px)';
+
+@fade: 97%;
+@color-primary: #3d3d3d;
+@color-light: #ffffff;
+@color-dark: #202020;
+@color-secondary: lighten(@color-dark, 12%);
+@color-offset: #ffffff;
+@color-accent: #fe6b22;
+@color-accent-dark: #c9551a;
+@color-accent-light: #f87736;
+@color-accent-border: #c44100;
+@canvas-color: #F2F2F2;
+
+@color-body: #ffffff;
+/*jess baily*******
+/*@color-primary: #F2ECE4;*/
+@color-primary: #f9f7f5;
+@color-primary-text: contrast(@color-primary);
+@color-primary-border: darken(@color-primary, 90%);
+
+@color-primary-offset: darken(@color-primary, 80%); 
+@color-primary-offset-text: contrast(@color-primary-offset);
+@color-primary-offset-border: darken(@color-primary-offset, 90%);
+
+@color-accent: #F25116;
+@color-accent-text: contrast(@color-accent);
+@color-accent-border: darken(@color-accent, 50%);
+@canvas-color: #bdbdbd;
+/******/
+/*UX Gymnasium*******/
+/*@color-primary: #F2ECE4;*/
+@color-primary: #f9f7f5;
+@color-primary-text: contrast(@color-primary);
+@color-primary-border: darken(@color-primary, 90%);
+
+@color-primary-offset: darken(@color-primary, 80%); 
+@color-primary-offset-text: contrast(@color-primary-offset);
+@color-primary-offset-border: darken(@color-primary-offset, 90%);
+
+@color-accent: #fc3714;
+@color-accent-text: contrast(@color-accent);
+@color-accent-border: darken(@color-accent, 50%);
+@canvas-color: #B4B4B4;
+/*SNOW WHITE*******
+@color-primary: #ffffff;
+@color-primary-text: contrast(@color-primary);
+@color-primary-border: darken(@color-primary, 90%);
+
+@color-primary-offset: #2d2d2d; 
+@color-primary-offset-text: contrast(@color-primary-offset);
+@color-primary-offset-border: darken(@color-primary-offset, 90%);
+
+@color-accent: #1775EB;
+@color-accent-text: contrast(@color-accent);
+@color-accent-border: darken(@color-accent, 50%);
+@canvas-color: #ffffff;
+/******/
+
+/*F7 THEME*/
+:root {
+	--f7-theme-color: @color-accent;
+	--f7-theme-color-rgb: 237, 20, 91;
+	--f7-theme-color-shade: darken(@color-accent, 20%);
+	--f7-theme-color-tint: lighten(@color-accent, 20%);
+
+	--f7-color-gray: #222222;
+	--f7-color-gray-rgb: 64, 64, 64;
+	--f7-color-gray-shade: #2e2e2e;
+	--f7-color-gray-tint: #585757;
+}
+/******/
+
+@color-offset: @color-primary-offset;
+@color-secondary: @color-primary-offset;
+
+
+@color-primary-light: #999BA6;
+
+@color-light: #f0f0f0;
+@color-dark: #222222;
+/*@color-offset: #ffffff;*/
+@color-body: #ffffff;
+
+
+/*
+@color-primary: #ffffff;
+@color-light: #ffffff;
+@color-dark: #202020; //f7 dark theme uses #1c1c1d
+@color-secondary: rgb(228, 228, 228);
+@color-offset: #202020;
+@color-accent: #1b95f8;
+*/
+
+@color-light-gray: #ebebeb;
+@color-gray-100: #ebebeb;
+@color-gray-200: #cccccc;
+@color-gray-300: #979797;
+@color-gray-400: #707070;
+@color-gray-500: #464646;
+@color-gray-600: #2e2e2e;
+@color-gray-700: #1d1d1d;
+@color-gray-800: #131313;
+@color-gray-900: #070707;
+@color-disabled: @color-gray-300;
+@color-border-primary: @color-gray-400;
+
+@color-secondary-border: darken(@color-secondary, 50%);
+@panel-color: fade(@color-primary, @fade);
+@primary-color-faded: fade(@color-primary, @fade);
+
+@text-input-color: @color-gray-200;
+@text-input-rounded: 2px;
+
+@rounded: 8px;
+@border-radius: 44rem;
+@swatch-radius: 44rem;
+@swatch-size: 32px;
+@font-size-xs: 1.7rem;
+@font-size: 1.7rem;
+@input-size: 32px;
+@block-size-xs: 22px;
+@block-size-sm: 38px;
+@block-size: 44px;
+@block-size-lg: 50px;
+@block-size-xl: 88px;
+@header-size: 64px;
+@input-padding: 2px;
+@padding: 4px;
+@control-margin: 8px;
+@transition-speed: 0.3s;
+@min-button-width: 44px;
+@min-button-height: 44px;
+
+@toolbar-background-color: @color-primary;
+@toolbar-text-color: @color-offset;
+@toolbar-font-size-sm: 1.7rem;
+@toolbar-font-size-lg: 2rem;
+@toolbar-active-color: @color-accent;
+/*****BORDERED THEME****************
+@toolbar-size: 44px;
+@toolbar-padding: 4px;
+@toolbar-outer-size: @toolbar-size + @toolbar-padding + 2px;
+@toolbar-border-width: 1px;
+@toolbar-border-radius: @rounded;
+@toolbar-border-color: @color-offset;
+/***********************************/
+@toolbar-size: @block-size + 10px;
+@toolbar-padding: 0px;
+@toolbar-outer-size: @toolbar-size;
+@toolbar-border-width: 1px;
+@toolbar-border-radius: 0px;
+@toolbar-border-color: @color-secondary;
