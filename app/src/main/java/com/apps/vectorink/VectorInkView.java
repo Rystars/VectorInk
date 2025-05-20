@@ -62,7 +62,7 @@ public class VectorInkView extends Activity
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
 			vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
 		}
-		webView.addJavascriptInterface(new WebAppInterface(this), "AndroidBridge");
+		vectorInk.addJavascriptInterface(new WebAppInterface(this), "AndroidBridge");
 		vectorInk.setDownloadListener(new DownloadListener()
 		{
 			@Override
