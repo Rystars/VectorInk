@@ -64,7 +64,8 @@
 	}
 	module.exports = new JSQL_SERVER()
 })()
-/************************************************************************
+
+/************************************************************/
 var app = require('./jsql/jsql-server')
 app.connect({
 	database: 'appstack',
@@ -74,14 +75,11 @@ app.connect({
 }).then(() => {
 	app.jsql.table.users.
 })
-/************************************************************************
 var admin = require('firebase-admin')
 admin.initializeApp({
   credential: admin.credential.applicationDefault(),
   databaseURL: 'https://appstack.firebaseio.com'
 });
-/************************************************************************
 var og = require('./client/lib/og/og.js')
 var shop = og.shop('sk_test_OvMKuxbHtysUgf82cfL94cdT00zvjo4Ptp', 'plan_G7qFujf4AzZGFi')
 shop.init(app)
-/************************************************************************/
