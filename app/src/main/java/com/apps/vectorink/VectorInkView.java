@@ -52,12 +52,15 @@ public class VectorInkView extends Activity
 		vectorInk.getSettings().setAllowFileAccess(true);
 		vectorInk.getSettings().setDomStorageEnabled(true);
 		vectorInk.getSettings().setJavaScriptEnabled(true);
-		vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
 		vectorInk.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 		vectorInk.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
 		vectorInk.getSettings().setLoadsImagesAutomatically(true);
 		vectorInk.getSettings().setBuiltInZoomControls(true);
-		
+		web_view.getSettings().setLightTouchEnabled(true);
+		web_view.getSettings().setDatabaseEnabled(true);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+			vectorInk.getSettings().setAlgorithmicDarkeningAllowed(true);
+		}
 		vectorInk.setDownloadListener(new DownloadListener()
 		{
 			@Override
