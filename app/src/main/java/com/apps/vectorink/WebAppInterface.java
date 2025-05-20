@@ -20,6 +20,5 @@ public class WebAppInterface {
     @JavascriptInterface
     public String getAllNames() {
         return db.getAllNamesAsJson();
-  
-}
+    }
 }
